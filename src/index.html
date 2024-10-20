@@ -43,23 +43,31 @@
 
       <div>
         <label for="password">Пароль:</label>
-        <input
-          type="password"
-          id="password"
-          required
-          placeholder="Придумайте пароль"
-        />
+        <div class="password-container">
+          <input
+            type="password"
+            id="password"
+            required
+            placeholder="Придумайте пароль"
+          />
+          <span class="toggle-password" data-target="password"> 👁️ </span>
+        </div>
         <span id="password-error" class="error-message"></span>
       </div>
 
       <div>
         <label for="password-confirm">Подтверждение пароля:</label>
-        <input
-          type="password"
-          id="password-confirm"
-          required
-          placeholder="Повторите пароль"
-        />
+        <div class="password-container">
+          <input
+            type="password"
+            id="password-confirm"
+            required
+            placeholder="Повторите пароль"
+          />
+          <span class="toggle-password" data-target="password-confirm">
+            👁️
+          </span>
+        </div>
         <span id="password-confirm-error" class="error-message"></span>
       </div>
 

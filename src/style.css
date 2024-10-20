@@ -74,3 +74,22 @@ input.invalid {
 input.valid {
   border-color: #5cb85c;
 }
+
+.password-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+  color: #0056b3;
+}

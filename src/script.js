@@ -6,6 +6,7 @@ const password = document.getElementById('password');
 const passwordConfirm = document.getElementById('password-confirm');
 const birthDay = document.getElementById('birth-day');
 const submitButton = document.getElementById('form-button');
+const togglePasswordIcons = document.querySelectorAll('.toggle-password');
 
 function validateName(name) {
   const regex = /^[a-zA-Zа-яА-ЯёЁ\s-]{2,30}$/;
@@ -97,4 +98,14 @@ birthDay.addEventListener('input', () => {
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   alert('Форма успешно отправлена!');
+});
+
+togglePasswordIcons.forEach((icon) => {
+  icon.addEventListener('click', () => {
+    const target = document.getElementById(icon.dataset.target);
+    const isPasswordVisible = target.type === 'password';
+
+    target.type = isPasswordVisible ? 'text' : 'password';
+    icon.textContent = isPasswordVisible ? '🔒' : '👁️';
+  });
 });
