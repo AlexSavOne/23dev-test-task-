@@ -36,14 +36,19 @@ function validateAge(birthDate) {
 
 function setValidity(input, isValid, errorMessage = '') {
   const errorElement = document.getElementById(`${input.id}-error`);
+
   if (isValid) {
     input.classList.add('valid');
     input.classList.remove('invalid');
     errorElement.textContent = '';
+    setTimeout(() => {
+      errorElement.style.opacity = '0';
+    }, 300);
   } else {
     input.classList.add('invalid');
     input.classList.remove('valid');
     errorElement.textContent = errorMessage;
+    errorElement.style.opacity = '1';
   }
 }
 
